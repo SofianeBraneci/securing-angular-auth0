@@ -6,13 +6,15 @@ import { AuthGuard } from '@auth0/auth0-angular';
 const routes: Routes = [
   {
     path: "",
-    component: MainLandingComponent
+    component: MainLandingComponent,
+    title: "Landing"
   }, 
   {
     path: "welcome",
     pathMatch: "full",
     component: WelcomeLandingComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    title: "Welcome"
   },
   {
     path: "**",
